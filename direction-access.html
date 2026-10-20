@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Интеллектуальные системы контроля доступа — INTLOCK</title>
+  <meta name="description" content="Электронные замки, биометрия, RFID и мобильные ключи: проектирование и внедрение систем контроля и управления доступом. INTLOCK, Испания." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="assets/intlock-icon.png" />
+  <link rel="apple-touch-icon" href="assets/intlock-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-title-i18n="dir.access.pageTitle">
+  <!-- Прогресс прокрутки -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- Фоновые свечения -->
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <!-- ============================ Шапка ============================ -->
+  <header class="header" id="top">
+    <div class="container nav">
+      <a href="index.html" class="logo" aria-label="INTLOCK — на главную">
+        <img class="logo-img" src="assets/intlock-logo-white.png" alt="INTLOCK" width="141" height="45" />
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Основная навигация">
+        <a href="index.html#access" data-i18n="nav.access">Контроль доступа</a>
+        <a href="index.html#wifi" data-i18n="nav.wifi">Wi-Fi сети</a>
+        <a href="index.html#video" data-i18n="nav.video">Видеонаблюдение</a>
+        <a href="index.html#audit" data-i18n="nav.audit">Аудит</a>
+        <a href="index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang" role="group" aria-label="Язык / Language">
+          <button type="button" class="lang-btn is-active" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn-primary btn-sm" href="feedback.html" data-i18n="nav.cta">Написать нам</a>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="index.html#access" data-i18n="nav.access">Контроль доступа</a>
+      <a href="index.html#wifi" data-i18n="nav.wifi">Wi-Fi сети</a>
+      <a href="index.html#video" data-i18n="nav.video">Видеонаблюдение</a>
+      <a href="index.html#audit" data-i18n="nav.audit">Аудит</a>
+      <a href="index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+      <a href="feedback.html" data-i18n="nav.cta">Написать нам</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================ Направление ============================ -->
+    <section class="section" id="direction">
+      <div class="container">
+        <div class="dir-top">
+          <a class="crumbs" href="index.html">&larr; <span data-i18n="dir.back">Все направления</span></a>
+        </div>
+
+        <div class="section-head">
+          <span class="kicker" data-i18n="dir.kicker">Направления</span>
+          <h2 data-i18n="dir.access.t">Интеллектуальные системы контроля и управления доступом</h2>
+          <p data-i18n="dir.access.d">Проектируем и внедряем электронные замки, биометрию, RFID-идентификацию и мобильные ключи: от одной двери до сети объектов с единым управлением.</p>
+        </div>
+
+        <div class="dir-detail">
+          <div class="dir-figure">
+            <img src="assets/dir-access.jpg" data-fallback="assets/dir-access.svg" loading="lazy"
+                 alt="Интеллектуальные системы контроля и управления доступом" data-i18n-alt="dir.access.img" />
+          </div>
+          <div class="dir-includes">
+            <h3 data-i18n="dir.includes">Что входит</h3>
+            <ul class="usecase-list">
+              <li data-i18n="dir.access.b1">Электронные замки и цилиндры для дверей, шкафов и сейфов</li>
+              <li data-i18n="dir.access.b2">Биометрия: отпечаток, лицо, код-пароль</li>
+              <li data-i18n="dir.access.b3">RFID-карты, брелоки и браслеты</li>
+              <li data-i18n="dir.access.b4">Мобильные ключи по Bluetooth и Wi-Fi + журнал событий</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="dir-benefits-title" data-i18n="dir.benefits">Что вы получите</h3>
+        <div class="dir-benefits">
+          <article class="bento-card spotlight">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2.5"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10"/></svg>
+            </div>
+            <h3 data-i18n="dir.access.c1.t">Единый контур</h3>
+            <p data-i18n="dir.access.c1.d">Выдача и отзыв доступа в один клик по всем точкам — прямо из приложения.</p>
+          </article>
+          <article class="bento-card spotlight">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2.5"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10"/></svg>
+            </div>
+            <h3 data-i18n="dir.access.c2.t">Вход без ключей</h3>
+            <p data-i18n="dir.access.c2.d">Гостям и подрядчикам доступ выдаётся на время и заканчивается автоматически.</p>
+          </article>
+          <article class="bento-card spotlight">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2.5"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10"/></svg>
+            </div>
+            <h3 data-i18n="dir.access.c3.t">Полный журнал</h3>
+            <p data-i18n="dir.access.c3.d">Видно, кто и когда открывал дверь — удобно для аренды, отелей и офисов.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CTA ============================ -->
+    <!-- ============================ Каталог PDF ============================ -->
+    <section class="cta" id="cta">
+      <div class="container cta-inner">
+        <h2 data-i18n="dir.pdfTitle">Каталог продукции INTLOCK</h2>
+        <p data-i18n="dir.pdfSub">Замки, контроллеры и оборудование — в одном файле PDF.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="https://intlock.es/files/INTLock_Smart_Lock_Catalog_2025-1.pdf" target="_blank" rel="noopener" data-i18n="products.pdf">Скачать каталог (PDF)</a>
+          <a class="btn btn-ghost btn-lg" href="https://wa.me/34642041237?text=Hello!%20I%20want%20to%20know%20about%20your%20services." target="_blank" rel="noopener" data-i18n="hero.cta1">Написать в WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ Подвал ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img class="logo-img" src="assets/intlock-logo-white.png" alt="INTLOCK" width="141" height="45" />
+          </a>
+          <p data-i18n="footer.brand">Интеллектуальные системы контроля доступа, Wi-Fi сети, видеонаблюдение и технический аудит. Intelligent Technology Changes Your Life.</p>
+          <a class="footer-link" href="https://intlock.es/files/INTLock_Smart_Lock_Catalog_2025-1.pdf" target="_blank" rel="noopener" data-i18n="products.pdf">Скачать каталог (PDF)</a>
+        </div>
+
+        <nav class="footer-col" aria-label="Разделы страницы">
+          <h4 data-i18n="footer.sections">Разделы</h4>
+          <a href="index.html#access" data-i18n="nav.access">Контроль доступа</a>
+          <a href="index.html#wifi" data-i18n="nav.wifi">Wi-Fi сети</a>
+          <a href="index.html#video" data-i18n="nav.video">Видеонаблюдение</a>
+          <a href="index.html#audit" data-i18n="nav.audit">Аудит</a>
+          <a href="feedback.html" data-i18n="nav.feedback">Обратная связь</a>
+          <a href="https://intlock.es/become-a-partner-2/" target="_blank" rel="noopener" data-i18n="cta.partner">Стать партнёром</a>
+        </nav>
+
+        <div class="footer-col" id="contacts">
+          <h4 data-i18n="footer.contacts">Контакты</h4>
+          <a class="contact-link" href="https://wa.me/34642041237?text=Hello!%20I%20want%20to%20know%20about%20your%20services." target="_blank" rel="noopener">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M8.8 8.6c.3 2.6 2.7 5 5.3 5.4l1-1.3 1.7.8c-.5 1.3-1.9 1.8-3.4 1.4-2.9-.7-5.4-3.2-6.1-6.1-.4-1.5.1-2.9 1.4-3.4l.8 1.7-1.4 1.1Z" fill="currentColor"/>
+            </svg>
+            WhatsApp (+34) 642-041-237
+          </a>
+          <a class="contact-link" href="mailto:info@intlock.es">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.6"/>
+              <path d="m4 8 8 5 8-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            info@intlock.es
+          </a>
+          <p class="footer-address" data-i18n="footer.city">Espana</p>
+
+          <div class="socials">
+            <a href="https://www.youtube.com/@INTLock" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8Z" stroke="currentColor" stroke-width="1.5"/><path d="m10 15 5-3-5-3v6Z" fill="currentColor"/></svg>
+            </a>
+            <a href="https://t.me/INTLOCKS" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m8 13 9-6-6 8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://www.instagram.com/intlock.es/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61556325635294" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 8.5V7c0-1 .5-1.5 1.6-1.5H17V3h-2.3C12 3 11 4.5 11 6.7v1.8H9V11h2v10h3V11h2.2l.4-2.5H14Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@intlock.es" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3-3.46" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M14 6c.8 1.8 2.4 2.8 4.5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> intlock.es · <span data-i18n="footer.rights">Интеллектуальные системы контроля и управления доступом</span></span>
+        <a class="footer-bottom-link" href="https://intlock.es/" target="_blank" rel="noopener">intlock.es</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

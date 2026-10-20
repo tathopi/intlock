@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Обратная связь — INTLOCK</title>
+  <meta name="description" content="Обратная связь INTLOCK: напишите нам о умных замках, аренде и партнёрстве. Для отправки сообщения нужен вход в аккаунт." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="assets/intlock-icon.png" />
+  <link rel="apple-touch-icon" href="assets/intlock-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-title-i18n="feedback.pageTitle">
+  <!-- Прогресс прокрутки -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- Фоновые свечения -->
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <!-- ============================ Шапка ============================ -->
+  <header class="header" id="top">
+    <div class="container nav">
+      <a href="index.html" class="logo" aria-label="INTLOCK — на главную">
+        <img class="logo-img" src="assets/intlock-logo-white.png" alt="INTLOCK" width="141" height="45" />
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Основная навигация">
+        <a href="index.html#access" data-i18n="nav.access">Контроль доступа</a>
+        <a href="index.html#wifi" data-i18n="nav.wifi">Wi-Fi сети</a>
+        <a href="index.html#video" data-i18n="nav.video">Видеонаблюдение</a>
+        <a href="index.html#audit" data-i18n="nav.audit">Аудит</a>
+        <a href="index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang" role="group" aria-label="Язык / Language">
+          <button type="button" class="lang-btn is-active" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="btn btn-primary btn-sm" href="feedback.html" data-i18n="nav.cta">Написать нам</a>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="index.html#access" data-i18n="nav.access">Контроль доступа</a>
+      <a href="index.html#wifi" data-i18n="nav.wifi">Wi-Fi сети</a>
+      <a href="index.html#video" data-i18n="nav.video">Видеонаблюдение</a>
+      <a href="index.html#audit" data-i18n="nav.audit">Аудит</a>
+      <a href="index.html#contacts" data-i18n="nav.contacts">Контакты</a>
+      <a href="feedback.html" data-i18n="nav.cta">Написать нам</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================ Обратная связь ============================ -->
+    <section class="section" id="feedback">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker" data-i18n="feedback.kicker">Обратная связь</span>
+          <h2><span data-i18n="feedback.title">Напишите</span> <span class="gradient-text" data-i18n="feedback.titleAccent">нам</span></h2>
+          <p data-i18n="feedback.sub">Вопрос о замках, аренде или партнёрстве — пишите, отвечаем в течение рабочего дня.</p>
+        </div>
+
+        <div class="fb-card spotlight">
+          <!-- Без входа: показываем предупреждение и кнопку авторизации -->
+          <div class="fb-locked" id="fbLocked">
+            <p data-i18n="feedback.needAuth">Чтобы отправить сообщение, сначала войдите в аккаунт.</p>
+            <button type="button" class="btn btn-primary" id="fbLoginBtn" data-i18n="feedback.login">Войти или зарегистрироваться</button>
+          </div>
+
+          <!-- После входа: поле сообщения и кнопка отправки -->
+          <form class="fb-form" id="fbForm" hidden>
+            <p class="fb-user" id="fbUser"></p>
+            <label class="field">
+              <span data-i18n="feedback.label">Сообщение</span>
+              <textarea class="fb-textarea" id="fbText" name="message" rows="7" placeholder="Расскажите, что вам нужно: модель замка, объект, сроки…" data-i18n-placeholder="feedback.ph"></textarea>
+            </label>
+            <p class="form-error" id="fbError" role="alert" hidden></p>
+            <div class="fb-actions">
+              <span class="fb-hint" data-i18n="feedback.hint">Минимум 10 символов · сообщение сохраняется в браузере (демо-режим)</span>
+              <button type="submit" class="btn btn-primary" data-i18n="feedback.submit">Отправить сообщение</button>
+            </div>
+          </form>
+
+          <p class="fb-success" id="fbSuccess" role="status" hidden data-i18n="feedback.success">Сообщение отправлено! Мы ответим на вашу почту.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ Подвал ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img class="logo-img" src="assets/intlock-logo-white.png" alt="INTLOCK" width="141" height="45" />
+          </a>
+          <p data-i18n="footer.brand">Интеллектуальные системы контроля доступа, Wi-Fi сети, видеонаблюдение и технический аудит. Intelligent Technology Changes Your Life.</p>
+          <a class="footer-link" href="https://intlock.es/files/INTLock_Smart_Lock_Catalog_2025-1.pdf" target="_blank" rel="noopener" data-i18n="products.pdf">Скачать каталог (PDF)</a>
+        </div>
+
+        <nav class="footer-col" aria-label="Разделы страницы">
+          <h4 data-i18n="footer.sections">Разделы</h4>
+          <a href="index.html#access" data-i18n="nav.access">Контроль доступа</a>
+          <a href="index.html#wifi" data-i18n="nav.wifi">Wi-Fi сети</a>
+          <a href="index.html#video" data-i18n="nav.video">Видеонаблюдение</a>
+          <a href="index.html#audit" data-i18n="nav.audit">Аудит</a>
+          <a href="feedback.html" data-i18n="nav.feedback">Обратная связь</a>
+          <a href="https://intlock.es/become-a-partner-2/" target="_blank" rel="noopener" data-i18n="cta.partner">Стать партнёром</a>
+        </nav>
+
+        <div class="footer-col" id="contacts">
+          <h4 data-i18n="footer.contacts">Контакты</h4>
+          <a class="contact-link" href="https://wa.me/34642041237?text=Hello!%20I%20want%20to%20know%20about%20your%20services." target="_blank" rel="noopener">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M8.8 8.6c.3 2.6 2.7 5 5.3 5.4l1-1.3 1.7.8c-.5 1.3-1.9 1.8-3.4 1.4-2.9-.7-5.4-3.2-6.1-6.1-.4-1.5.1-2.9 1.4-3.4l.8 1.7-1.4 1.1Z" fill="currentColor"/>
+            </svg>
+            WhatsApp (+34) 642-041-237
+          </a>
+          <a class="contact-link" href="mailto:info@intlock.es">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.6"/>
+              <path d="m4 8 8 5 8-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            info@intlock.es
+          </a>
+          <p class="footer-address" data-i18n="footer.city">Espana</p>
+
+          <div class="socials">
+            <a href="https://www.youtube.com/@INTLock" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8Z" stroke="currentColor" stroke-width="1.5"/><path d="m10 15 5-3-5-3v6Z" fill="currentColor"/></svg>
+            </a>
+            <a href="https://t.me/INTLOCKS" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m8 13 9-6-6 8" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://www.instagram.com/intlock.es/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61556325635294" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 8.5V7c0-1 .5-1.5 1.6-1.5H17V3h-2.3C12 3 11 4.5 11 6.7v1.8H9V11h2v10h3V11h2.2l.4-2.5H14Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@intlock.es" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3-3.46" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M14 6c.8 1.8 2.4 2.8 4.5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> intlock.es · <span data-i18n="footer.rights">Интеллектуальные системы контроля и управления доступом</span></span>
+        <a class="footer-bottom-link" href="https://intlock.es/" target="_blank" rel="noopener">intlock.es</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="auth.js"></script>
+  <script src="feedback.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
